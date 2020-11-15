@@ -1,4 +1,5 @@
 import * as express from "express";
+import * as api from "./api";
 
 export const register = (app: express.Application) => {
   // define a route handler for the default home page
@@ -10,4 +11,7 @@ export const register = (app: express.Application) => {
   app.get("/calculator", (req: any, res) => {
     res.render("calculator");
   });
+
+  // include api routes
+  api.register(app);
 };
