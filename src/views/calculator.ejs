@@ -37,12 +37,38 @@
         <p>The 'add' action add 5 to the current total.</p>
         <p>The 'subtract' action subtract 5 from the current total.</p>
       </section>
-      <div class="row">
-        <a class="col s2 waves-effect waves-light btn">add</a>
-        <span class="col s2"></span>
-        <a class="col s2 waves-effect waves-light btn red">subtract</a>
+      <div id="calculator">
+        <h5>Current: {{ current }}</h5>
+        <div class="row">
+          <button class="col s2 waves-effect waves-light btn" @click="add">
+            add
+          </button>
+          <span class="col s1"></span>
+          <button
+            class="col s2 waves-effect waves-light btn red"
+            @click="subtract"
+          >
+            subtract
+          </button>
+        </div>
+        <h5>Actions:</h5>
+        <table v-if="hasActions">
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>When</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="action in actions">
+              <td>{{ action.action }}</td>
+              <td>{{ action.created_at }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </main>
     <%- include('partials/footer'); %>
+    <script src="js/main.js"></script>
   </body>
 </html>
