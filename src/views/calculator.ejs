@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Development Challenge - AZ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('partials/nav'); %>
+    <main class="container">
+      <h1>Calculator</h1>
+      <section>
+        <h4>Instruction:</h4>
+        <p>
+          This calculator has two actions and it can show history of actions.
+        </p>
+        <p>It begins at 0.</p>
+        <p>The 'add' action add 5 to the current total.</p>
+        <p>The 'subtract' action subtract 5 from the current total.</p>
+      </section>
+      <div class="row">
+        <a class="col s2 waves-effect waves-light btn">add</a>
+        <span class="col s2"></span>
+        <a class="col s2 waves-effect waves-light btn red">subtract</a>
+      </div>
+    </main>
+    <%- include('partials/footer'); %>
+  </body>
+</html>

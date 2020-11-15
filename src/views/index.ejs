@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Development Challenge - AZ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('partials/nav'); %>
+    <main class="container">
+      <h1>Development Challenge</h1>
+      <h6>By Arden Zhong</h6>
+      <section>
+        <h4>About:</h4>
+        <p>
+          This project was created for a calculator with 'add' and 'substract'
+          functions.
+        </p>
+      </section>
+      <a class="btn" href="/calculator">
+        <i class="material-icons right">arrow_forward</i>
+        Get Calculator!
+      </a>
+    </main>
+    <%- include('partials/footer'); %>
+  </body>
+</html>
